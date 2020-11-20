@@ -1,0 +1,553 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A low-cost, high-reliable Open Source WiFi Tally Light">
+      
+      
+      
+        <link rel="canonical" href="https://wifi-tally.github.io/tally.html">
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.5">
+    
+    
+      
+        <title>Tally - WiFi Tally Light</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.21aed14c.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tally" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://wifi-tally.github.io/" title="WiFi Tally Light" class="md-header-nav__button md-logo" aria-label="WiFi Tally Light">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            WiFi Tally Light
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Tally
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/wifi-tally/wifi-tally/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://wifi-tally.github.io/" title="WiFi Tally Light" class="md-nav__button md-logo" aria-label="WiFi Tally Light">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    WiFi Tally Light
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/wifi-tally/wifi-tally/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" class="md-nav__link">
+      Open Source Tally Light
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="download.html" class="md-nav__link">
+      Download
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="getting-started.html" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="protocol.html" class="md-nav__link">
+      Protocol
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tally
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="tally.html" class="md-nav__link md-nav__link--active">
+      Tally
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tally-settingsini-reference" class="md-nav__link">
+    tally-settings.ini Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-ws2812-neopixel-etc" class="md-nav__link">
+    Using WS2812, NeoPixel, etc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-leds-with-common-cathode" class="md-nav__link">
+    Using LEDs with common cathode
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="troubleshooting.html" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tally-settingsini-reference" class="md-nav__link">
+    tally-settings.ini Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-ws2812-neopixel-etc" class="md-nav__link">
+    Using WS2812, NeoPixel, etc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-leds-with-common-cathode" class="md-nav__link">
+    Using LEDs with common cathode
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/wifi-tally/wifi-tally/edit/master/documentation/docs/tally.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="tally">Tally<a class="headerlink" href="#tally" title="Permanent link">&para;</a></h1>
+<h2 id="tally-settingsini-reference">tally-settings.ini Reference<a class="headerlink" href="#tally-settingsini-reference" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>setting name</th>
+<th>default</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>station.ssid</code></td>
+<td><strong>(required)</strong></td>
+<td>The name of the WiFi that the Tally should connect to</td>
+</tr>
+<tr>
+<td><code>station.password</code></td>
+<td>(none)</td>
+<td>The password to connect to the WiFi. If the WiFi has no password, leave it empty.</td>
+</tr>
+<tr>
+<td><code>hub.ip</code></td>
+<td><strong>(required)</strong></td>
+<td>The IP address the hub is running on</td>
+</tr>
+<tr>
+<td><code>hub.port</code></td>
+<td><code>7411</code></td>
+<td>The port where the hub listens.</td>
+</tr>
+<tr>
+<td><code>tally.name</code></td>
+<td>(chip id)</td>
+<td>How you want <em>this</em> tally to be labeled in the hub. This name needs to be unique amongst all tallies in your network. It must not be longer than <code>26</code> characters. Use of ASCII characters is recommended.</td>
+</tr>
+<tr>
+<td><code>operator.type</code></td>
+<td><code>grb+</code></td>
+<td>How the pins for the operator light are driven. Use <code>grb+</code> when a <code>high</code> state signalizes <em>off</em> and <code>grb-</code> when a <code>low</code> state signalizes <em>off</em>.</td>
+</tr>
+<tr>
+<td><code>operator.ws2812</code></td>
+<td><code>5</code></td>
+<td>Number of WS2812 like LEDs in a strip that serve as operator lights. Has to be a number between <code>0</code> and <code>10</code>. The operator lights are the first in the strip, followed by the stage lights.</td>
+</tr>
+<tr>
+<td><code>stage.type</code></td>
+<td><code>grb+</code></td>
+<td>How the pins for the stage light are driven. Use <code>grb+</code> when a <code>high</code> state signalizes <em>off</em> and <code>grb-</code> when a <code>low</code> state signalizes <em>off</em>.</td>
+</tr>
+<tr>
+<td><code>stage.ws2812</code></td>
+<td><code>0</code></td>
+<td>Number of WS2812 like LEDs in a strip that serve as stage lights. Has to be a number between <code>0</code> and <code>10</code>. The stage  lights come right after the operator lights in the strip.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="using-ws2812-neopixel-etc">Using WS2812, NeoPixel, etc<a class="headerlink" href="#using-ws2812-neopixel-etc" title="Permanent link">&para;</a></h2>
+<p>WS2812-compatible LED strips come with many names. Most common are <code>WS2812b</code> and <code>NeoPixel</code>. If you have
+anything that says it is compatible with either of those, it will probably work.</p>
+<p>Connect the strip to pin <code>D4</code>, the <code>+5V</code> and <code>GND</code> respectively.</p>
+<p><img alt="connection of a WS2812 strip" src="images/tally-schematics-ws2812.png" /></p>
+<p>By default the first <code>5</code> pixels in the strip will work as Operator Lights, the others stay dark.</p>
+<p>The number of LEDs you want to use as Operator Lights and Stage Lights can be configured in 
+<code>tally-settings.ini</code> with the <code>operator.ws2812</code> and <code>stage.ws2812</code> settings.</p>
+<p>In the example above, the correct configuration to drive 4 Operator Lights and 4 Stage Lights
+would be</p>
+<pre><code class="language-ini">operator.ws2812 = 4
+stage.ws2812    = 4
+</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Order of LED lights</p>
+<p>When wiring, please note, that the Operator Lights always come <em>before</em> the Stage Lights.</p>
+</div>
+<p>It is also possible to combine WS2812 strips and RGB Leds in one setup as all pins are driven
+simultaneously. You could, for instance use a single RGB LED as the operator light and a
+WS2812 strip for the stage light.</p>
+<p><img alt="connection of a WS2812 strip" src="images/tally-schematics-ws2812-rgb.png" /></p>
+<p>The configuration for this example would be</p>
+<pre><code class="language-ini">operator.ws2812 = 0
+stage.ws2812    = 4
+</code></pre>
+<h2 id="using-leds-with-common-cathode">Using LEDs with common cathode<a class="headerlink" href="#using-leds-with-common-cathode" title="Permanent link">&para;</a></h2>
+<p>You can use an LED with a common cathode with the tally. First connect the common pin
+to <code>GND</code> instead of <code>3V3</code> and then configure <code>tally-settings.ini</code> to drive the pins correctly.
+If you skip this step the colors that should be on are off, and vice versa.</p>
+<pre><code class="language-ini">operator.type = grb-
+stage.type    = grb-
+</code></pre>
+<p>You can also mix different RGB Led types for the Operator and Stage Light.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="protocol.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Protocol
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="troubleshooting.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Troubleshooting
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/wifi-tally" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
