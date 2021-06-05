@@ -13,12 +13,12 @@
       
         <link rel="canonical" href="https://wifi-tally.github.io/getting-started/setup-wifi-tally.html">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
     
     
       
-        <title>Build and set up a WiFi Tally - WiFi Tally Light</title>
+        <title>Build and set up a WiFi Tally - vTally – Open Source Tally Light</title>
       
     
     
@@ -69,10 +69,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="WiFi Tally Light" class="md-header__button md-logo" aria-label="WiFi Tally Light" data-md-component="logo">
+    <a href=".." title="vTally – Open Source Tally Light" class="md-header__button md-logo" aria-label="vTally – Open Source Tally Light" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -82,7 +81,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            WiFi Tally Light
+            vTally – Open Source Tally Light
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -162,13 +161,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="WiFi Tally Light" class="md-nav__button md-logo" aria-label="WiFi Tally Light" data-md-component="logo">
+    <a href=".." title="vTally – Open Source Tally Light" class="md-nav__button md-logo" aria-label="vTally – Open Source Tally Light" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../images/logo.png" alt="logo">
 
     </a>
-    WiFi Tally Light
+    vTally – Open Source Tally Light
   </label>
   
     <div class="md-nav__source">
@@ -210,7 +208,7 @@
   
     <li class="md-nav__item">
       <a href="../download.html" class="md-nav__link">
-        Download
+        Installation
       </a>
     </li>
   
@@ -702,11 +700,15 @@ or <a href="https://nodemcu.readthedocs.io/en/master/getting-started/#esptoolpy"
 and follow their installation instruction. Similarly select <a href="https://nodemcu.readthedocs.io/en/master/getting-started/#esplorer">ESPlorer</a>
 or <a href="https://nodemcu.readthedocs.io/en/master/getting-started/#nodemcu-tool">NodeMCU Tool</a> to upload code and follow
 their installation instruction.</p>
+<p>Download <a href="https://github.com/wifi-tally/wifi-tally/releases/download/0.5.0/vtally-0.5.0-esp8266.zip">vtally-0.5.0-esp8266.zip</a>
+for the latest files for the ESP8266.</p>
 <h2 id="flash-the-firmware">Flash the firmware<a class="headerlink" href="#flash-the-firmware" title="Permanent link">&para;</a></h2>
 <p>When everything is set up flash the firmware with the tool selected in the previous step.</p>
-<p>The firmware is the <code>.bin</code> file in the <code>firmware</code> folder.</p>
+<p>The firmware is the <code>.bin</code> file in <a href="https://github.com/wifi-tally/wifi-tally/releases/download/0.5.0/vtally-0.5.0-esp8266.zip">vtally-0.5.0-esp8266.zip</a>.</p>
 <h2 id="upload-code">Upload Code<a class="headerlink" href="#upload-code" title="Permanent link">&para;</a></h2>
-<p>Use the tool you have selected to upload the following files from the <code>tally</code> folder to the NodeMCU board:</p>
+<p>Use the tool you have selected to upload the following files from
+<a href="https://github.com/wifi-tally/wifi-tally/releases/download/0.5.0/vtally-0.5.0-esp8266.zip">vtally-0.5.0-esp8266.zip</a>
+to the NodeMCU board:</p>
 <ul>
 <li>every file ending in <code>.lc</code></li>
 <li><code>init.lua</code></li>
